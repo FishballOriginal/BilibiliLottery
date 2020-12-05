@@ -57,7 +57,7 @@ print('Bilibili转发抽奖工具v1.0')
 print('Bilibili@鱼丸子_Official')
 
 url = 'https://api.vc.bilibili.com/dynamic_repost/v1/dynamic_repost/repost_detail?dynamic_id=' + input('输入动态号')
-repostList = GetPagesCycle(url)
+repostList = list(dict.fromkeys(GetPagesCycle(url)))
 print('成功获取转发列表')
 generateNum = int(input('输入随机数量'))
 
